@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmed Al-Halal - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS Library for scroll animations -->
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+    background: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    }
+    header.hidden {
+    transform: translateY(-100%);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #444;
+    }
+    /* About Section */
+    #about {
+      margin-top: 2vh;
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #about p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    /* Experience Section */
+    #experience .experience-item {
+      background: #fff;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-left: 5px solid #333;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* CV Section */
+    #cv {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    #cv a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    #cv a:hover {
+      background: #555;
+    }
+    /* Video Section */
+    #video {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    #video iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
+    }
+    /* Contact Section */
+    #contact {
+      margin-top: 2vh;
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    /* projects Section */
+    #projects .project-item {
+      background: #fff;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-left: 5px solid #333;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    #projects .project-item h3 {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <h1>Ahmed Al-Halal</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up" style="margin-top: calc(170px + 4rem);">
+    <h2 class="section-title">About Me</h2>
+    <p>I'm a web developer and programmer with experience in both front-end and back-end development. I've worked on a variety of projects, both on my own and in teams,
+       that highlight my skills in programming, databases, scripting, project planning, problem solving, UI design.
+        I'm familiar with several programming languages including Java, C#, HTML, CSS, JavaScript, PHP, and SQL.
+    </p>
+    <p>I enjoy building websites and applications that are clean, simple to use, and work well.
+       I'm always excited to learn new technologies and improve my skills by understanding how things are built and how they can be made better.</p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" data-aos="fade-up">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+      <h3>Software Developer Intern at IT Vision LLC</h3>
+      <small>May 2022 - August 2022</small>
+      <p>Developed and maintained responsive web applications using HTML, CSS, JavaScript.</p>
+    </div>
+    </div>
+  </section>
+  
+  <!-- CV Section -->
+  <section id="cv" data-aos="fade-up">
+    <h2 class="section-title">My CV</h2>
+    <div style="text-align: center; margin-bottom: 0.5rem;">
+      <small>Click the image below to view or download my CV.</small>
+    </div>
+    <a href="https://polytechnicbh-my.sharepoint.com/:b:/g/personal/202303581_student_polytechnic_bh/Efe1iRDWNLtOh1NP6pNMBu4BvEvXhmlkESrBlWC54EIdKQ?e=1uSKJV" title="CV Link">
+      <img src="CV.jpg" alt="CV Link" style="max-width: 300px;">
+    </a>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" data-aos="fade-up">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+      <h3>CityWheelsBH Database</h3>
+      <p>I've Designed and implemented a Database for CityWheelsBH, the database adheres to the  European Union's GDPR(General Data Protection
+        Regulation) and Bahrain's PDPL(Personal Data Protection Law).<br></p>
+      <p>the database has advanced and secure encryption (AES-512) and all sensitive user data was encrypted in the database. the project was done using OracleSQL. 
+        <br>  the project was done with utmost care as security was very important in order to protect the users data.
+      </p>
+      <div style="display: flex; flex-direction: column; align-items: center; margin-top: 1rem;">
+        <img src="physical-erd.png" alt="ERD Diagram" style="width: 100%; max-width: 800px; border-radius: 8px;">
+        <small style="margin-top: 0.5rem; text-align: center;">Physical Entity-Relationship Diagram for the Database</small>
+      </div>
+    </div>
+    <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+      <h3>Project Management App</h3>
+      <p>I've collaborated with a team to make an app for Charity that manages multiple projects, tracks funding, manages and assigns volunteers to projects and tracks project status.</p>
+      <p>the app was using C#, the app has a very simple and easy to use UI.</p>
+      <p>Below are Samples of the app</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem;">
+      <img src="UI Design - Log In.png" alt="Log-in window" style="width: 100%; max-width: 190px; border-radius: 8px; cursor: pointer;" onclick="openModal(0)">
+      <img src="UI Design - Registration.png" alt="Registration window" style="width: 100%; max-width: 190px; border-radius: 8px; cursor: pointer;" onclick="openModal(1)">
+      <img src="UI Design - Add New Project.png" alt="Adding a new Project window" style="width: 100%; max-width: 190px; border-radius: 8px; cursor: pointer;" onclick="openModal(2)">
+      <img src="UI Design - Donation Request.png" alt="Requesting Donation window" style="width: 100%; max-width: 190px; border-radius: 8px; cursor: pointer;" onclick="openModal(3)">
+      <img src="UI Design - Request Volunteers.png" alt="Requesting Volunteers window" style="width: 100%; max-width: 190px; border-radius: 8px; cursor: pointer;" onclick="openModal(4)">
+      <small style="margin-top: 0.5rem; text-align: center;">Preview of the App, Click to enlarge.</small>
+      </div>
+
+      <!-- Modal -->
+      <div id="imageModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8);
+       justify-content: center; align-items: center; z-index: 1000;">
+      <span style="position: absolute; top: 20px; right: 30px; font-size: 2rem; color: white; cursor: pointer;" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="" style="max-width: 90%; max-height: 90%; border-radius: 8px;">
+      <button id="prevButton" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: none; border: none;
+       color: white; font-size: 2rem; cursor: pointer;" onclick="prevImage()">&#10094;</button>
+      <button id="nextButton" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: none; border: none;
+       color: white; font-size: 2rem; cursor: pointer;" onclick="nextImage()">&#10095;</button>
+      </div>      
+    </div>
+    </section>
+
+  <!-- Video Section -->
+  <section id="video" data-aos="fade-up">
+    <h2 class="section-title">Video Introduction</h2>
+    <p>Watch this video to learn more about my background and skills.</p>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen title="Video Introduction"></iframe>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</h2>
+    <div>
+      <p style="display: flex; align-items: center;">
+        <span class="material-symbols-outlined" style="margin-right: 5px;">
+          mail
+        </span>
+        <a href="mailto:202303581@student.polytechnic.bh">202303581@student.polytechnic.bh</a>
+      </p>
+      <p style="display: flex; align-items: center;">
+        <span class="material-symbols-outlined" style="margin-right: 5px;">
+          phone
+        </span>
+        <a href="tel:+973-335-555-55">+973-33477657</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ahmed Al-Halal. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+	
+    const images = [
+      "UI Design - Log In.png",
+      "UI Design - Registration.png",
+      "UI Design - Add New Project.png",
+      "UI Design - Donation Request.png",
+      "UI Design - Request Volunteers.png"
+    ];
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = images[currentIndex];
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.style.display = 'none';
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = images[currentIndex];
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = images[currentIndex];
+    }
+    </script>
+ 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false, 
+      mirror: true 
+    });
+  </script>
+</body>
+</html>
